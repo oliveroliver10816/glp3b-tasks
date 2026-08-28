@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GLP3-B — publishing tasks, wave 1</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1d1d1b;--ink2:#4b463e;--paper:#fff;--cream:#fff7ec;--line:#e8ddcb;
+--brand:#f07800;--brandtext:#a04b00;--green:#69ab30;--greentext:#3f7314;--red:#b3261e}
+body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;background:var(--cream);
+color:var(--ink);font-size:17px;line-height:1.6}
+.wrap{width:min(1280px,100% - 2.5rem);margin-inline:auto}
+@media(min-width:1500px){.wrap{width:min(1420px,100% - 4rem)}}
+header{background:var(--ink);color:var(--cream);padding:2rem 0 1.6rem}
+h1{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
+header p{color:#cfc7ba;margin-top:.5rem;max-width:80ch}
+.rules{background:#fff4e0;border-bottom:1px solid var(--line);padding:1.2rem 0}
+.rules ol{margin-left:1.2rem;max-width:90ch}
+.rules li{margin:.35rem 0;font-weight:600}
+.batch{margin:2rem 0 .6rem;font-size:1.3rem;font-weight:800}
+.batch span{font-size:.9rem;font-weight:600;color:var(--ink2)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;
+padding:1.2rem 1.3rem;margin:1rem 0}
+.card.done{opacity:.55}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.7rem}
+.tag{font-size:.8rem;font-weight:700;padding:.25rem .7rem;border-radius:999px;
+background:#fdf6ec;border:1px solid var(--line)}
+.tag.pf{background:var(--brand);color:var(--ink);border-color:var(--brand)}
+.num{font-weight:800;font-size:1.1rem;margin-right:.3rem}
+.card h3{font-size:1.15rem;margin:.2rem 0 .6rem}
+.tgt{font-size:.9rem;color:var(--ink2);word-break:break-all}
+.tgt b{color:var(--greentext)}
+.btnrow{display:flex;flex-wrap:wrap;gap:.6rem;margin:.9rem 0 .3rem}
+button{font:inherit;font-weight:700;cursor:pointer;border-radius:999px;
+border:2px solid var(--ink);background:var(--paper);color:var(--ink);
+padding:.6rem 1.2rem;min-height:44px}
+button.main{background:var(--brand);border-color:var(--brand)}
+button.ok{background:var(--green);border-color:var(--green)}
+.prev{border:1px dashed var(--line);border-radius:10px;padding:.9rem 1rem;
+margin-top:.8rem;background:#fffdf9;max-height:15rem;overflow:auto}
+.prev h2{font-size:1rem;margin:.7rem 0 .3rem}
+.prev p{margin:.5rem 0;font-size:.95rem;color:var(--ink2)}
+.prev a{color:var(--brandtext);font-weight:700}
+.warn{background:#fdecea;border:1px solid #f0c4c0;border-radius:10px;
+padding:.7rem .9rem;margin-top:.8rem;font-size:.93rem}
+footer{padding:2rem 0 3rem;color:var(--ink2);font-size:.9rem}
+</style></head><body>
+<header><div class="wrap"><h1>GLP3-B — publishing tasks, wave 1</h1>
+<p>Ten articles. Each one is published on the platform named on its card, and each one
+carries exactly one link. Press <b>Copy article</b> and paste once — the link is already
+inside what you copied, so you never need to select text or press Ctrl+K.</p></div></header>
+<div class="rules"><div class="wrap"><ol>
+<li>Paste with <b>Ctrl+V</b> into the editor's normal writing area. The link comes with it.</li>
+<li><b>Do not add any other link.</b> One link per article, exactly as pasted.</li>
+<li>After publishing, open the live page and check the link is blue and clickable, and that
+it goes to the address printed on the card.</li>
+<li><b>Tumblr only:</b> click the post's date to get its own permalink. The address must
+contain numbers. A blog home page stops pointing at the post as soon as you post again.</li>
+<li>Publish the first batch now. Publish the second batch <b>four days later</b>, not sooner.</li>
+<li>Send back the live address of every published post.</li>
+</ol></div></div>
+<div class="wrap">
+<div class="batch">Batch A — publish now <span>(5 articles)</span></div><div class="card" id="c_1" data-card="1">
+<div class="meta"><span class="num">1</span>
+<span class="tag pf">Google Sites</span>
+<span class="tag">UK</span>
+<span class="tag">532 words</span></div>
+<h3 id="t_1">How to judge a daily supplement before you buy it</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/uk/</b> — anchor text
+<b>&ldquo;GLP3-B&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(1,this)">Copy article (link included)</button>
+<button onclick="copyTitle(1,this)">Copy title</button>
+<button id="d_1" onclick="markDone(1,this)">Mark done</button>
+</div>
+<div class="prev" id="h_1"><p>Most people buy their first supplement badly. They see a headline, they order, and the pack sits half used in a drawer. The second purchase is usually smarter. Here is a way to be smart the first time.</p><h2>Start with the category, not the claim</h2><p>A food supplement is not a medicine. That is a legal distinction, not a marketing one. A medicine is authorised to treat a condition, and a prescriber decides who takes it. A food supplement sits under food law. It supplies nutrients or plant extracts, and it can be sold to the public directly. Knowing which of the two you are looking at settles most of your expectations in one step. Then move on.</p><h2>Read the ingredient list before anything else</h2><p>The ingredient list is the part of the page the seller has least freedom over. Everything around it is copy. So read the list cold, before the headline reaches you.</p><p>Look for names you can recognise and check yourself. Spirulina, matcha, L-carnitine, L-arginine, apple cider vinegar extract and zinc are each easy to research in five minutes. An unnamed proprietary blend is harder to check. That is not automatically bad. It just means you have less to go on.</p><h2>Ask whether it fits your actual day</h2><p>This is the step people skip, and it decides whether the pack gets finished. A capsule taken once a day with lunch is easy. A powder taken three times a day between meals is a project. Be honest about which one you will still be doing in week four.</p><p>Check the instruction too. One capsule, swallowed whole with two large glasses of water, is simple. Taking it fifteen to thirty minutes before a meal ties the dose to something you already do. Attaching a habit to an existing one beats relying on memory.</p><h2>Work out the price per pack, not the price on the banner</h2><p>Direct-sales pages usually show a low number in large type. That number is often the per-pack price of the biggest bundle. A single pack costs more. Neither figure is dishonest, but they answer different questions.</p><p>Do the arithmetic yourself. Take the total you would actually pay, divide it by the number of packs, and compare. Add delivery if it applies. Many sellers make delivery free on multi-pack orders only, which quietly widens the gap.</p><h2>Read the checkout before you fill it in</h2><p>Three things are worth finding before you enter a card number. First, who is selling: the manufacturer directly, or a reseller on a marketplace. Second, the returns terms, including how long you have and what state the pack must be in. A sixty-day money-back guarantee stated on the checkout page is a clear commitment. Third, whether the order is a one-off or a recurring subscription. Subscriptions are fine when you chose one, and unpleasant when you did not.</p><p>One example of a directly sold capsule that states all of this openly is <a href="https://glp3-b.shop/uk/">GLP3-B</a>, made and shipped by its manufacturer. Thirty capsules to a pack, one a day, with the guarantee printed at checkout.</p><p>None of this promises you anything. It only means the decision was yours, rather than the page making it for you.</p></div>
+</div><div class="card" id="c_4" data-card="4">
+<div class="meta"><span class="num">4</span>
+<span class="tag pf">Blogger</span>
+<span class="tag">PL</span>
+<span class="tag">525 words</span></div>
+<h3 id="t_4">Zamawiasz suplement u producenta? Sprawdź to przed kliknięciem</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/pl/</b> — anchor text
+<b>&ldquo;stronie GLP3-B&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(4,this)">Copy article (link included)</button>
+<button onclick="copyTitle(4,this)">Copy title</button>
+<button id="d_4" onclick="markDone(4,this)">Mark done</button>
+</div>
+<div class="prev" id="h_4"><p>Coraz więcej suplementów diety kupuje się dziś bezpośrednio u producenta, z pominięciem apteki i sklepowej półki. Nie ma pudełka, które można obejrzeć w dłoni przed decyzją. Jest strona, formularz i przycisk. To wygodne, ale wymaga zupełnie innej uwagi niż zwykły zakup w sklepie. Poniżej lista rzeczy, które warto sprawdzić, zanim klikniesz.</p><h2>Suplement to nie lek</h2><p>Suplement diety jest żywnością, a nie lekiem, i to są dwie osobne kategorie prawne. Lek ma zatwierdzone wskazania i przepisuje go lekarz. Suplement uzupełnia codzienną dietę i na tym jego rola się kończy. Warto trzymać to rozróżnienie w głowie przy czytaniu dowolnego opisu produktu.</p><h2>Skład czytaj od pierwszej pozycji</h2><p>Składniki wymienia się w kolejności malejącej ilości, więc pierwsze pozycje ważą w preparacie najwięcej. Sprawdź, czy producent w ogóle podaje pełną listę, czy tylko ogólną nazwę formuły. Zwrot o naturalnym składzie sam w sobie nie mówi nic. Po minucie czytania powinieneś umieć wymienić składniki z pamięci.</p><h2>Licz cenę za opakowanie</h2><p>Nagłówek zwykle pokazuje najniższą możliwą kwotę za sztukę, a ta kwota prawie zawsze dotyczy większego zestawu. To nie jest podstęp, ale bardzo łatwo się na tym pomylić. Policz samodzielnie: całą kwotę podziel przez liczbę opakowań, a potem przez liczbę kapsułek w opakowaniu. Dopiero ta liczba pozwala uczciwie porównać dwie oferty. Dolicz też wysyłkę, jeśli sklep ją nalicza, bo przy większych zestawach bywa wliczona i realnie zmienia rachunek.</p><h2>Zwroty i dane sprzedawcy</h2><p>Zasady zwrotu powinny być widoczne na stronie zamówienia, a nie dopiero w mailu po zakupie. Sprawdź, ile dni masz na decyzję i od którego momentu liczy się ten termin. Sprawdź też, czy zwrot obejmuje opakowanie już otwarte. Poszukaj nazwy firmy, adresu i sposobu kontaktu, bo brak tych danych to wystarczający powód, żeby zamknąć kartę.</p><h2>Uważaj na presję czasu</h2><p>Licznik odliczający minuty do końca promocji ma jeden cel: zniechęcić cię do porównywania. Jeśli oferta jest sensowna, będzie sensowna również za godzinę. Zapisz adres strony i wróć do niej po przerwie. Zamówienia złożone na spokojnie znacznie rzadziej kończą się zwrotem.</p><h2>Kiedy zapytać lekarza</h2><p>Jeśli przyjmujesz leki na stałe, zapytaj lekarza lub farmaceutę, zanim dołożysz do dnia cokolwiek nowego. To samo dotyczy ciąży, karmienia piersią i chorób przewlekłych. Pytanie zajmuje minutę i zamyka temat na dobre. Nie przekraczaj też zalecanej dziennej porcji, nawet jeśli wydaje się niewielka.</p><h2>Kapsułka musi zmieścić się w dniu</h2><p>Najlepszy suplement to po prostu ten, o którym pamiętasz codziennie. Przypnij go do czynności, którą i tak wykonujesz o stałej porze. Obiad sprawdza się lepiej niż abstrakcyjna godzina w kalendarzu. Postaw opakowanie tam, gdzie na pewno je zobaczysz, i popijaj tak, jak zaleca producent.</p><h2>Jak to wygląda w praktyce</h2><p>Taki komplet informacji widać na przykład na <a href="https://glp3-b.shop/pl/">stronie GLP3-B</a>. Producent wymienia tam sześć składników: spirulinę, matchę, L-karnitynę, L-argininę, ekstrakt z octu jabłkowego i cynk. Opakowanie zawiera trzydzieści kapsułek, a dawka to jedna kapsułka dziennie. Bierze się ją na piętnaście do trzydziestu minut przed obiadem lub kolacją, albo w trakcie posiłku. Kapsułkę można też otworzyć i wsypać do wody. Na stronie zamówienia widnieje sześćdziesięciodniowa gwarancja zwrotu pieniędzy, a przy zestawie dwu- i trzyopakowaniowym dostawa jest bezpłatna.</p><p>Żaden preparat nie zastąpi snu, ruchu i normalnych posiłków. Jeśli jednak coś kupujesz, kupuj świadomie. Pięć minut spędzonych uważnie na stronie zamówienia oszczędza sporo późniejszej irytacji.</p></div>
+</div><div class="card" id="c_5" data-card="5">
+<div class="meta"><span class="num">5</span>
+<span class="tag pf">Tumblr</span>
+<span class="tag">DE</span>
+<span class="tag">520 words</span></div>
+<h3 id="t_5">Nahrungsergänzung: was das Etikett verraten muss</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/de/</b> — anchor text
+<b>&ldquo;GLP3-B&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(5,this)">Copy article (link included)</button>
+<button onclick="copyTitle(5,this)">Copy title</button>
+<button id="d_5" onclick="markDone(5,this)">Mark done</button>
+</div>
+<div class="prev" id="h_5"><p>Zwei Packungen im Regal sehen fast gleich aus. Beide nennen Pflanzenextrakte, beide klingen zurückhaltend. Der eigentliche Unterschied steht selten in der Werbung. Er steht auf dem Etikett und im Kleingedruckten.</p><h2>Warum die Sprache so vorsichtig klingt</h2><p>Für Nahrungsergänzungsmittel gilt Lebensmittelrecht. Aussagen zur Gesundheit sind in der EU streng geregelt. Erlaubt ist nur, was auf einer offiziellen Liste zugelassener Angaben steht. Ein Produkt darf nicht behaupten, eine Krankheit zu heilen oder zu verhüten. Wer also große Versprechen liest, liest meist eine Grenzüberschreitung. Vorsichtige Formulierungen sind deshalb kein Schwächezeichen. Sie sind oft schlicht das, was zulässig ist.</p><h2>Was auf jeder Packung stehen muss</h2><p>Einige Angaben sind Pflicht, und sie sind schnell geprüft. Die Bezeichnung Nahrungsergänzungsmittel gehört dazu. Ebenso die Kategorien der enthaltenen Stoffe und die empfohlene Tagesdosis. Dazu der Hinweis, diese Menge nicht zu überschreiten. Außerdem der Satz, dass ein Ergänzungsmittel eine ausgewogene Ernährung nicht ersetzt. Und schließlich Name und Anschrift des Verantwortlichen, Füllmenge, Mindesthaltbarkeit und Chargennummer.</p><p>Fehlt davon mehreres, ist das ein echtes Warnsignal. Ein sauber beschriftetes Produkt sagt noch nichts über Wirkung. Ein schlampig beschriftetes sagt viel über den Anbieter.</p><h2>Kategorie klären, dann weiterlesen</h2><p>Ein Nahrungsergänzungsmittel gehört rechtlich in eine andere Schublade als ein verschreibungspflichtiges Arzneimittel. Das ordnet die eigene Erwartung in einem einzigen Schritt. Mehr Gedanken braucht dieser Punkt nicht.</p><h2>Die Zutatenliste vor der Werbung lesen</h2><p>Die Zutatenliste ist der Teil einer Seite, den ein Anbieter am wenigsten frei gestalten kann. Alles andere ist Text. Lesen Sie die Liste zuerst, kühl und ohne die Überschrift im Kopf.</p><p>Namen, die man selbst nachschlagen kann, sind ein Vorteil. Spirulina, Matcha, L-Carnitin, L-Arginin, Apfelessig-Extrakt und Zink lassen sich in wenigen Minuten recherchieren. Eine namenlose Mischung lässt sich dagegen nicht prüfen. Das ist nicht automatisch schlecht. Es bleibt nur weniger übrig, worauf man sich stützen kann.</p><h2>Passt die Einnahme in einen normalen Tag</h2><p>Diese Frage entscheidet, ob eine Packung leer wird. Eine Kapsel täglich zum Mittag- oder Abendessen ist leicht. Ein Pulver dreimal am Tag zwischen den Mahlzeiten ist ein Projekt.</p><p>Konkrete Hinweise helfen dabei. Eine Kapsel, unzerkaut mit zwei großen Gläsern Wasser, ist eindeutig. Fünfzehn bis dreißig Minuten vor einer Hauptmahlzeit hängt die Einnahme an etwas, das ohnehin passiert. Wer Kapseln schlecht schluckt, sollte das Etikett lesen. Manche dürfen ausdrücklich in Wasser geöffnet werden.</p><h2>Beim Kauf direkt beim Hersteller</h2><p>Im Direktvertrieb kommen drei Punkte dazu. Erstens: Wer verkauft hier eigentlich? Ein vollständiges Impressum beantwortet das in Sekunden. Zweitens: Wie lauten die Rückgabebedingungen? Eine Geld-zurück-Garantie über 60 Tage, die auf der Kassenseite selbst steht, ist eine klare Zusage. Drittens: Einzelbestellung oder Abo? Ein Abo ist in Ordnung, wenn man es bewusst gewählt hat.</p><p>Rechnen Sie außerdem den Preis je Packung selbst aus. Die große Zahl auf einer Verkaufsseite gehört meist zum größten Bündel. Versandkosten gehören in dieselbe Rechnung. Häufig ist der Versand erst ab zwei oder drei Packungen frei.</p><p>Ein Beispiel für diesen direkten Weg ist <a href="https://glp3-b.shop/de/">GLP3-B</a>, das der Hersteller selbst in Europa verkauft. Eine Kapsel täglich, dreißig Kapseln je Packung, sechs namentlich genannte Zutaten.</p><p>Nichts davon sagt etwas über die Wirkung eines Produkts aus. Es sagt etwas darüber, wie sorgfältig ein Anbieter arbeitet. Und genau das lässt sich vor dem Kauf prüfen.</p></div>
+</div><div class="card" id="c_8" data-card="8">
+<div class="meta"><span class="num">8</span>
+<span class="tag pf">Write.as</span>
+<span class="tag">UK</span>
+<span class="tag">541 words</span></div>
+<h3 id="t_8">The habit is the hard part, not the capsule</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/uk/</b> — anchor text
+<b>&ldquo;GLP3-B, a food supplement&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(8,this)">Copy article (link included)</button>
+<button onclick="copyTitle(8,this)">Copy title</button>
+<button id="d_8" onclick="markDone(8,this)">Mark done</button>
+</div>
+<div class="prev" id="h_8"><p>Most people do not abandon a daily supplement because they decided it was useless. They abandon it because they forgot. Twice on a busy Tuesday, then again at the weekend, and by week three the pack is at the back of a drawer. Nothing was learned and the money is gone. That failure has nothing to do with what is inside the capsule.</p><h2>The second week is where it breaks</h2><p>The first week runs on novelty. You bought something, so you remember it. Week two has no novelty left and nothing visible to show yet. That gap is where most routines die. Plan for it before you order, not after.</p><h2>Anchor it to a meal, not to a clock</h2><p>Alarms are weak anchors. You silence one while doing something else, and the memory leaves with the sound. A meal is stronger, because you cannot skip it quietly. Many capsules are meant to be taken with or shortly before lunch or dinner anyway. That instruction is doing you a favour. Keep the pack where you eat, not where you sleep.</p><h2>The water is part of the instruction</h2><p>Labels often ask for a large glass of water, sometimes two. People read that as a footnote. It is not. Swallowing a capsule on a dry throat is unpleasant, and unpleasant things get skipped. Some capsules can also be opened into a glass of water instead. Check whether yours says that before you struggle with it.</p><h2>Thirty capsules is a calendar</h2><p>A pack of thirty is roughly a month. That makes the pack itself an honest tracker. If ten capsules are gone but twenty days have passed, you already have your answer. Count them once a week. It is faster than any app and harder to argue with.</p><h2>What to check on the order page</h2><p>Buying direct from a manufacturer is normal now, and the checkout tells you plenty. Look for the daily instruction written plainly, not buried in a footer. Look for the capsule count per pack. Then work out the cost per pack across the bundles on offer. A multi-pack headline can hide a better deal, or a worse one. Check whether delivery is included on the larger options. Check the refund window and what it actually covers. A 60-day guarantee, for instance, outlasts the pack itself. You can finish a full month and still change your mind.</p><h2>One example of that layout</h2><p>A food supplement sits in a different legal category from a prescription medicine, and it should be read as food. One example is <a href="https://glp3-b.shop/uk/">GLP3-B, a food supplement</a> its manufacturer sells direct across Europe. It is one capsule a day, swallowed whole with two large glasses of water, taken shortly before or with lunch or dinner. Thirty capsules come in a pack. The six named ingredients are spirulina, matcha, L-carnitine, L-arginine, apple cider vinegar extract and zinc. The capsule may also be opened into water if you prefer.</p><h2>Decide the anchor before the pack arrives</h2><p>Pick the meal. Pick the glass. Pick the shelf it will live on, in the room where that meal happens. Write nothing down and buy no tracker. If the anchor is real, week two stops being a cliff, and the pack does the counting for you.</p></div>
+</div><div class="card" id="c_9" data-card="9">
+<div class="meta"><span class="num">9</span>
+<span class="tag pf">LiveJournal</span>
+<span class="tag">SE</span>
+<span class="tag">541 words</span></div>
+<h3 id="t_9">Checklista innan du beställer kosttillskott på nätet</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/se/</b> — anchor text
+<b>&ldquo;GLP3-B, ett kosttillskott i kapselform&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(9,this)">Copy article (link included)</button>
+<button onclick="copyTitle(9,this)">Copy title</button>
+<button id="d_9" onclick="markDone(9,this)">Mark done</button>
+</div>
+<div class="prev" id="h_9"><p>Att beställa kosttillskott direkt från tillverkaren har blivit vanligt i Sverige. Du hittar produkten i ett flöde eller i en artikel. Sedan står du i en kassa hos ett företag du aldrig hört talas om. Där gissar de flesta sig fram. Här är en checklista i stället.</p><h2>Läs vad som faktiskt står i kassan</h2><p>En kassa säger mer om säljaren än startsidan gör. Leta efter företagsnamn, adress och ett organisationsnummer eller momsnummer. Leta efter en e-postadress som går direkt till företaget. Kontrollera att köpvillkoren går att öppna och läsa i sin helhet. Se efter varifrån varan skickas och vem som står som avsändare. Saknas den informationen är det ett skäl att avbryta köpet. Ett seriöst företag har ingen anledning att dölja vilka de är.</p><h2>Priset per förpackning säger mer än rubriken</h2><p>Nästan alla direktförsäljare visar flera paket bredvid varandra. Den lägsta siffran i rubriken gäller oftast det största köpet. Räkna själv i stället för att lita på rubriken. Ta totalsumman och dela den med antalet förpackningar. Lägg till frakten om den tillkommer på det minsta alternativet. Då har du en siffra som faktiskt går att jämföra. Tänk också på hur länge en förpackning räcker. Trettio kapslar och en kapsel om dagen räcker en månad.</p><h2>Ångerrätt och garanti är inte samma sak</h2><p>Många blandar ihop de här två begreppen. Ångerrätt vid distansköp följer lagen och gäller under en bestämd tid. För förseglade varor finns undantag, så läs villkoren innan du bryter förseglingen. En garanti är i stället ett löfte från säljaren själv. Den står i företagets egna villkor och kan se olika ut. Läs hur lång den är och vad du måste göra. Spara ordernumret och notera datumet när paketet kommer.</p><h2>Kosttillskott är inte läkemedel</h2><p>Skillnaden är enkel, men den glöms ofta bort. Ett kosttillskott är ett livsmedel som kompletterar den vanliga kosten. Läkemedel är en annan kategori med egna regler och egen tillsyn. Håll isär de två när du läser marknadsföring på nätet. Har du en pågående behandling eller är gravid pratar du med din läkare först.</p><h2>Rutinen avgör om du blir klar med förpackningen</h2><p>Ett tillskott du glömmer i skåpet gör ingen nytta alls. Rutinen är därför viktigare än ambitionen. Fäst kapseln vid något du redan gör varje dag. Lunchen fungerar för de flesta som arbetar. Vatten hör ihop med de flesta kapslar, gärna rikligt. Ställ förpackningen framme där du faktiskt ser den. Ge det minst en hel förpackning innan du bedömer någonting.</p><h2>Ett exempel på hur det kan se ut</h2><p>Ett exempel är <a href="https://glp3-b.shop/se/">GLP3-B, ett kosttillskott i kapselform</a> som säljs direkt av tillverkaren. Tillverkaren anger spirulina, matcha, L-karnitin, L-arginin, extrakt av äppelcidervinäger och zink. En kapsel om dagen tas med två stora glas vatten. Den tas femton till trettio minuter före eller till lunch eller middag. Kapseln kan också öppnas i ett glas vatten. En förpackning innehåller trettio kapslar. I kassan anges en pengarna-tillbaka-garanti på sextio dagar. Frakten är fri på två- och trepack. Gå igenom checklistan ovan på den sidan precis som på vilken annan sida som helst.</p><h2>Innan du klickar på köp</h2><p>Läs villkoren en gång till. Kontrollera vem som står som säljare. Räkna ut priset per förpackning. Notera hur du når företaget om något blir fel. Bestäm sedan var i din dag kapseln ska passa in.</p></div>
+</div>
+<div class="batch">Batch B — publish four days later <span>(5 articles)</span></div><div class="card" id="c_2" data-card="2">
+<div class="meta"><span class="num">2</span>
+<span class="tag pf">Google Sites</span>
+<span class="tag">DE</span>
+<span class="tag">484 words</span></div>
+<h3 id="t_2">Direkt beim Hersteller bestellen: eine kurze Checkliste</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/de/</b> — anchor text
+<b>&ldquo;GLP3-B&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(2,this)">Copy article (link included)</button>
+<button onclick="copyTitle(2,this)">Copy title</button>
+<button id="d_2" onclick="markDone(2,this)">Mark done</button>
+</div>
+<div class="prev" id="h_2"><p>Viele Nahrungsergänzungsmittel gibt es heute nur noch direkt beim Hersteller. Kein Regal, kein Marktplatz, nur eine eigene Seite mit Bestellformular. Das ist bequem und oft günstiger. Es verschiebt aber Arbeit zum Käufer. Man prüft selbst, was sonst der Händler im Regal vorsortiert. Diese Checkliste macht das in wenigen Minuten.</p><h2>Zuerst die Kategorie klären</h2><p>Ein Nahrungsergänzungsmittel ist rechtlich etwas anderes als ein verschreibungspflichtiges Arzneimittel. Es wird nicht zugelassen, sondern beim Bundesamt für Verbraucherschutz und Lebensmittelsicherheit angezeigt. Es ergänzt die Ernährung. Wer diesen Unterschied kennt, liest jede Produktseite ruhiger.</p><h2>Etikett schlägt Werbetext</h2><p>Auf jeder ordentlichen Seite steht die vollständige Zutatenliste. Lies sie vor dem Fließtext. Achte auf Stoffe, die du nicht verträgst. Prüfe außerdem, wie viele Kapseln eine Packung enthält. Eine Packung mit dreißig Kapseln und einer Kapsel am Tag reicht einen Monat. Diese kleine Rechnung sagt dir, wie oft du nachbestellst.</p><h2>Den Preis pro Packung ausrechnen</h2><p>Die große Zahl auf der Startseite sagt wenig. Entscheidend ist der Preis pro Packung und pro Kapsel. Mehrfachpakete wirken teuer und sind pro Einheit meist günstiger. Rechne kurz nach. Teile den Gesamtpreis durch die Anzahl der Packungen. Teile das Ergebnis danach durch die Kapseln je Packung. Erst diese Zahl lässt sich zwischen zwei Anbietern vergleichen. Achte zusätzlich darauf, ob Versandkosten dazukommen. Bei vielen Herstellern ist der Versand ab zwei Packungen frei. Das verschiebt den Vergleich spürbar.</p><h2>Vor dem Absenden der Bestellung prüfen</h2><p>Steht ein vollständiges Impressum auf der Seite? Gibt es eine echte Anschrift und nicht nur ein Formular? Wird die Zutatenliste genannt und nicht nur ein Werbetext? Steht die Verzehrempfehlung dort, wo man sie ohne Suchen findet? Ist die Frist für die Rückgabe klar beschrieben? Siehst du den Endpreis inklusive Versand vor der Bestätigung? Sechs Fragen, zwei Minuten. Fehlt eine Antwort, warte lieber einen Tag.</p><h2>Passt die Einnahme in deinen Tag</h2><p>Die sorgfältigste Auswahl nützt nichts, wenn die Packung im Schrank bleibt. Prüfe die Einnahme also vor dem Kauf. Eine Kapsel täglich ist im Alltag leicht. Drei Portionen Pulver mit Messlöffel sind es nicht. Koppel die Einnahme an eine feste Gewohnheit, etwa an das Mittagessen. Stelle die Packung sichtbar hin. Der hinterste Küchenschrank ist der Ort, an dem Routinen sterben.</p><p>Ein Beispiel aus dieser Kategorie ist <a href="https://glp3-b.shop/de/">GLP3-B</a>, das der Hersteller in Europa direkt verkauft. Eine Packung enthält dreißig Kapseln. Vorgesehen ist eine Kapsel pro Tag, unzerkaut mit zwei großen Gläsern Wasser. Sie wird 15 bis 30 Minuten vor dem Mittag- oder Abendessen genommen oder dazu. Wer Kapseln schlecht schluckt, darf sie öffnen und in Wasser einrühren. Genannt werden sechs Zutaten: Spirulina, Matcha, L-Carnitin, L-Arginin, Apfelessig-Extrakt und Zink. An der Kasse steht eine Geld-zurück-Frist von 60 Tagen. Der Versand ist beim Zweier- und Dreierpaket frei.</p><h2>Drei Zeilen für später notieren</h2><p>Notiere das Bestelldatum und den Tag, an dem die Rückgabefrist endet. Sichere die Bestellbestätigung als Datei. Schreibe auf, wann du mit der Einnahme begonnen hast. Diese drei Zeilen kosten eine Minute. Sie ersparen dir später jedes Suchen im Postfach.</p></div>
+</div><div class="card" id="c_3" data-card="3">
+<div class="meta"><span class="num">3</span>
+<span class="tag pf">Tumblr</span>
+<span class="tag">UK</span>
+<span class="tag">539 words</span></div>
+<h3 id="t_3">The daily supplement most people quit by week three</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/uk/</b> — anchor text
+<b>&ldquo;GLP3-B, sold by its manufacturer&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(3,this)">Copy article (link included)</button>
+<button onclick="copyTitle(3,this)">Copy title</button>
+<button id="d_3" onclick="markDone(3,this)">Mark done</button>
+</div>
+<div class="prev" id="h_3"><p>Most supplements do not fail because of what is inside them. They fail because the pack ends up at the back of a cupboard. Thirty capsules is a month of small decisions. Miss five of them and the month stops being a month.</p><p>Adherence is the boring part nobody writes about. It is also the part that decides whether you learn anything at all.</p><h2>Why the habit breaks</h2><p>Three things end most supplement routines. The first is a vague time. Sometime in the day is not a time. The second is a bad location. If the pack lives in a bag, it travels out of sight. The third is no feedback. You cannot watch a capsule working, so nothing nudges you.</p><p>Fix the time and fix the location. That handles most of it.</p><h2>Anchor it to a meal you never skip</h2><p>Pick the meal that always happens. For a lot of people here that is dinner, not breakfast. Breakfast is the first thing to go in a busy week.</p><p>Many capsules are meant to be taken shortly before a main meal, or with it. A window of fifteen to thirty minutes ahead is common. That window is useful precisely because it is attached to something you already do. You are not adding an event to your day. You are hanging one small act on an old one.</p><p>Keep the pack where the meal happens. A kitchen shelf beats a bedside drawer.</p><h2>Water is not a detail</h2><p>An instruction to take a capsule with two large glasses of water gets ignored constantly. People use a mouthful and carry on. Swallowing a capsule almost dry is the usual reason someone reports a scratchy feeling and then quits by week two.</p><p>If capsules are genuinely hard to swallow, read the label rather than guessing. Some are designed to be opened into a glass of water instead. That is a stated option, not an improvisation.</p><h2>The thirty day maths</h2><p>A pack of thirty is exactly one month at one a day. That makes tracking simple. Count what is left on the last Sunday of the month. Eleven remaining means you took nineteen. No app required.</p><p>It also tells you when to reorder. Order at capsule twenty two, not capsule thirty. A five day gap breaks the chain, and rebuilding a habit is harder than holding one.</p><h2>What to read before you pay</h2><p>A food supplement sits in a different legal category from a prescription medicine. Read it as its own thing and move on.</p><p>On a direct sales checkout, three things are worth finding before you enter a card. Are the ingredients named openly, or hidden behind a blend. Is the dose instruction specific, with a time and an amount of water. Are the returns terms written out on the page, not buried in a policy link.</p><p>One example of that direct sales format is <a href="https://glp3-b.shop/uk/">GLP3-B, sold by its manufacturer</a> across Europe. Its page names six ingredients, gives one capsule a day, and states a sixty day money back guarantee at the checkout.</p><p>Give any routine a full pack before you form a view. Then look at your own count of missed days. That number usually explains more than the product ever will.</p></div>
+</div><div class="card" id="c_6" data-card="6">
+<div class="meta"><span class="num">6</span>
+<span class="tag pf">Google Sites</span>
+<span class="tag">FR</span>
+<span class="tag">558 words</span></div>
+<h3 id="t_6">Acheter en vente directe : ce qu&#x27;il faut vérifier avant de payer</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/fr/</b> — anchor text
+<b>&ldquo;Le site français de GLP3-B&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(6,this)">Copy article (link included)</button>
+<button onclick="copyTitle(6,this)">Copy title</button>
+<button id="d_6" onclick="markDone(6,this)">Mark done</button>
+</div>
+<div class="prev" id="h_6"><p>Acheter un complément alimentaire directement chez le fabricant demande quelques réflexes différents. Il n&#x27;y a pas de pharmacien au comptoir. Il n&#x27;y a pas non plus la fiche standardisée d&#x27;une grande place de marché. La page de commande devient votre principale source d&#x27;information. Voici ce qu&#x27;il faut y lire avant de valider.</p><h2>Qui vend et depuis où</h2><p>Cherchez d&#x27;abord l&#x27;identité du vendeur. Un site sérieux affiche une raison sociale, une adresse postale et un moyen de contact. Ces informations figurent en général dans les mentions légales ou en bas de page. Si aucun nom d&#x27;entreprise n&#x27;apparaît nulle part, passez votre chemin. Vérifiez aussi le pays d&#x27;expédition. Une commande partie d&#x27;un pays de l&#x27;Union européenne évite les mauvaises surprises douanières.</p><h2>Complément alimentaire ou médicament</h2><p>C&#x27;est la distinction la plus utile à avoir en tête. Un complément alimentaire relève de la réglementation alimentaire. Un médicament relève d&#x27;une autorisation de mise sur le marché. Ce sont deux catégories juridiques distinctes, avec des exigences distinctes. Un complément ne remplace ni un traitement ni une alimentation variée. Cette idée simple change la façon dont on lit une page produit.</p><h2>La composition avant les promesses</h2><p>Un fabricant qui assume sa formule la publie clairement. Vous devriez pouvoir lire la liste complète avant de payer, pas après réception. Notez les ingrédients, puis renseignez-vous tranquillement de votre côté. Si un site parle beaucoup d&#x27;effets et peu de composition, l&#x27;ordre des priorités vous renseigne déjà.</p><h2>Le prix par boîte, pas le prix affiché</h2><p>C&#x27;est l&#x27;erreur la plus fréquente. Les offres en vente directe sont presque toujours dégressives. Une boîte seule revient plus cher à l&#x27;unité qu&#x27;un lot de deux ou trois. Divisez le montant total par le nombre de boîtes. Divisez encore par le nombre de gélules. Vous obtenez un coût par jour, comparable d&#x27;un produit à l&#x27;autre. Intégrez les frais de port au calcul. Ils varient souvent selon la quantité commandée, et certains vendeurs les offrent à partir de deux boîtes.</p><h2>La garantie, lue en entier</h2><p>Beaucoup de sites annoncent une garantie satisfait ou remboursé. Le nombre de jours compte moins que les conditions écrites. Regardez à partir de quelle date court le délai. Vérifiez si les boîtes entamées sont acceptées. Vérifiez enfin qui prend en charge le retour. Une garantie claire tient en quelques lignes lisibles.</p><h2>La place de la gélule dans la journée</h2><p>Un produit oublié dans un tiroir ne sert à rien. Choisissez un moment que vous ne sautez jamais. Le repas de midi convient à beaucoup de gens. Posez la boîte près du verre, pas dans un placard fermé. Une gélule avalée avec un grand verre d&#x27;eau passe plus facilement. Une routine simple tient plus longtemps qu&#x27;une routine ambitieuse.</p><h2>Appliquer la grille à un produit réel</h2><p>Prenez n&#x27;importe quelle marque et déroulez la liste. <a href="https://glp3-b.shop/fr/">Le site français de GLP3-B</a> annonce par exemple une gélule par jour, avec deux grands verres d'eau. La prise est prévue quinze à trente minutes avant le déjeuner ou le dîner, ou pendant le repas. La gélule peut aussi être ouverte dans un verre d&#x27;eau. La boîte contient trente gélules. Six ingrédients sont nommés : spiruline, matcha, L-carnitine, L-arginine, extrait de vinaigre de cidre et zinc. Une garantie de soixante jours figure sur la page de paiement. Peu importe le produit que vous regardez : ce sont ces informations qui doivent être visibles avant que vous ne payiez.</p></div>
+</div><div class="card" id="c_7" data-card="7">
+<div class="meta"><span class="num">7</span>
+<span class="tag pf">Blogger</span>
+<span class="tag">IT</span>
+<span class="tag">558 words</span></div>
+<h3 id="t_7">Quanto costa davvero un mese di integratore</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/it/</b> — anchor text
+<b>&ldquo;GLP3-B, un integratore alimentare in capsule&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(7,this)">Copy article (link included)</button>
+<button onclick="copyTitle(7,this)">Copy title</button>
+<button id="d_7" onclick="markDone(7,this)">Mark done</button>
+</div>
+<div class="prev" id="h_7"><p>La cifra grande in cima alla pagina non è il costo del tuo mese. Quasi mai lo è. È il numero scelto per farti restare sulla pagina. Il costo reale si calcola in mezzo minuto. Conviene farlo prima di ordinare, non dopo.</p><h2>Il numero che conta è uno solo</h2><p>Prendi il totale finale del carrello, spedizione compresa. Dividilo per il numero di confezioni. Quello è il prezzo per confezione, ed è l&#x27;unico numero davvero confrontabile fra due offerte.</p><p>Poi fai un secondo passaggio. Guarda quante capsule contiene una confezione. Trenta capsule, una al giorno, sono un mese esatto. Sessanta capsule al doppio del prezzo sono la stessa identica cosa. Un formato con meno capsule a cifra simile è più caro, anche se sembra uguale.</p><h2>Perché i formati multipli costano meno al mese</h2><p>Chi vende direttamente sostiene un costo di spedizione per ogni singolo ordine. Un ordine più grande diluisce quel costo su più confezioni. Per questo la spedizione risulta spesso inclusa solo dai due o tre pezzi in su. Non è un regalo, è aritmetica.</p><p>Il ragionamento regge però a una condizione. Che tu usi davvero tutte le confezioni. Se ne compri tre e ti fermi al ventesimo giorno, il prezzo per confezione non è quello scritto. È molto più alto, perché il resto resta in un cassetto.</p><h2>Due parole che sembrano uguali e non lo sono</h2><p>Sui siti dei produttori compaiono spesso due cose diverse. Il diritto di recesso e la garanzia commerciale.</p><p>Il recesso è previsto dalla legge per gli acquisti online in Italia. Hai quattordici giorni per cambiare idea, senza dover spiegare il motivo. È un tuo diritto, non una gentilezza del venditore.</p><p>La garanzia soddisfatti o rimborsati è invece una promessa aggiuntiva dell&#x27;azienda. Dura quanto decide l&#x27;azienda e vale alle condizioni che l&#x27;azienda scrive. Può essere più lunga del recesso. Proprio per questo va letta parola per parola.</p><h2>Le tre righe da leggere davvero</h2><p>Prima di ordinare, cerca tre informazioni precise. Entro quanti giorni si può chiedere il rimborso, e da quale data si contano. Se il prodotto va rispedito, e chi paga quella spedizione. E a quale indirizzo si invia la richiesta.</p><p>Se queste tre righe non esistono, la promessa vale poco. Se esistono, conservale. Una schermata salvata il giorno dell&#x27;ordine è più utile di un ricordo.</p><h2>Una nota sulla categoria</h2><p>Un integratore alimentare non è un medicinale. Sono due categorie distinte, con regole e finalità diverse. Tenerlo a mente rende più semplice leggere qualsiasi pagina di vendita.</p><h2>Un esempio concreto</h2><p>Un caso concreto è <a href="https://glp3-b.shop/it/">GLP3-B, un integratore alimentare in capsule</a> venduto direttamente dal produttore in Europa. Il produttore indica sei ingredienti: spirulina, matcha, L-carnitina, L-arginina, estratto di aceto di mele e zinco. Una confezione contiene trenta capsule, quindi un mese. Si prende una capsula al giorno, deglutita intera con due bicchieri grandi d&#x27;acqua. Il momento indicato è da quindici a trenta minuti prima del pranzo o della cena, oppure durante. La capsula si può anche aprire in acqua. Al momento dell&#x27;ordine viene indicata una garanzia di rimborso di sessanta giorni, e la spedizione è inclusa sui formati da due e tre confezioni.</p><h2>Il conto finale</h2><p>Fai il calcolo prima di cliccare. Totale con spedizione, diviso per le confezioni, diviso per le capsule. Poi leggi le condizioni di rimborso fino in fondo. Sono cinque minuti che pesano più di qualsiasi titolo in grassetto.</p></div>
+</div><div class="card" id="c_10" data-card="10">
+<div class="meta"><span class="num">10</span>
+<span class="tag pf">Weebly</span>
+<span class="tag">DK</span>
+<span class="tag">550 words</span></div>
+<h3 id="t_10">Sådan holder du fast i en daglig kapsel i 30 dage</h3>
+<p class="tgt">The one link must point at <b>https://glp3-b.shop/dk/</b> — anchor text
+<b>&ldquo;kosttilskuddet GLP3-B&rdquo;</b></p>
+<div class="btnrow">
+<button class="main" onclick="copyRich(10,this)">Copy article (link included)</button>
+<button onclick="copyTitle(10,this)">Copy title</button>
+<button id="d_10" onclick="markDone(10,this)">Mark done</button>
+</div>
+<div class="prev" id="h_10"><h2>Vanen er det svære, ikke valget</h2><p>De fleste stopper ikke med et kosttilskud, fordi de er utilfredse. De stopper, fordi de glemmer det. Efter fire eller fem dage står pakken stadig i skabet. En pakke med tredive kapsler er i praksis en aftale med dig selv om en måned. Den aftale holder kun, hvis den er nem at holde.</p><h2>Bind kapslen til noget, du allerede gør</h2><p>En ny vane sidder bedst fast på en gammel. Vælg et fast tidspunkt, som du aldrig springer over. Frokosten er et godt anker for de fleste. Den ligger midt på dagen og flytter sig sjældent. Læg så pakken der, hvor måltidet faktisk foregår. Køkkenbordet slår natbordet, hvis kapslen hører til frokosten. Er du ude af huset hver dag, så læg dagens kapsel i den taske, du altid tager med.</p><h2>Vandet er ikke pynt</h2><p>Mange vejledninger beder dig tage kapslen med rigeligt vand. To store glas er et almindeligt råd. Det er ikke en detalje, du bare springer over. Vandet hjælper kapslen ned og gør det lettere at huske, at du rent faktisk har taget den. Nogle kapsler kan åbnes og røres ud i et glas vand. Læs på pakken, om det gælder netop din.</p><h2>Kosttilskud og medicin er to forskellige ting</h2><p>Et kosttilskud er en fødevare. Det er en anden kategori end et lægemiddel, og det skal ikke bruges som erstatning for et. Derfor har du selv ansvaret for at læse etiketten. Er du gravid, ammer du, eller tager du medicin, så spørg din læge først. Så er den del på plads, og du kan koncentrere dig om rutinen.</p><h2>Regn altid om til pris pr. pakke</h2><p>Direkte salg viser ofte ét stort tal i overskriften. Det tal siger meget lidt alene. Del totalen med antallet af pakker, hver gang. Læg fragten oveni, før du sammenligner to tilbud. Flere pakker er tit billigere pr. stk., og fragten kan følge med uden beregning. Køb kun flere, hvis du realistisk når at bruge dem. En ubrugt pakke i skuffen er ingen besparelse.</p><h2>Tjek betalingssiden, før du bestiller</h2><p>Kig efter fire ting, inden du trykker. Hvem er sælger, og står der en rigtig adresse. Hvad koster fragten, og hvornår lægges den på. Hvor lang tid har du til at fortryde eller sende varen retur. Og får du en kvittering på mail med et ordrenummer. Tag et skærmbillede af siden, før du betaler. Det tager fem sekunder og sparer dig for besvær senere.</p><h2>Et konkret eksempel</h2><p>Prøv listen af på et konkret produkt, for eksempel <a href="https://glp3-b.shop/dk/">kosttilskuddet GLP3-B</a>, som producenten sælger direkte i Danmark. Producenten oplyser seks ingredienser: spirulina, matcha, L-carnitin, L-arginin, æblecidereddike-ekstrakt og zink. Der er tredive kapsler i pakken, altså én måned ad gangen. Én kapsel om dagen tages hel med to store glas vand, femten til tredive minutter før eller sammen med frokost eller aftensmad. Kapslen kan også åbnes ned i vand. På betalingssiden står en pengene-tilbage-ordning på 60 dage, og fragten er gratis på to- og trepakken.</p><h2>Kort huskeliste</h2><p>Vælg ét fast måltid og hold fast i det. Stil pakken synligt frem det rigtige sted. Hav vandet klar, ikke som en eftertanke. Læs etiketten hele vejen igennem én gang. Regn prisen om pr. pakke inklusive fragt. Gem kvitteringen og noter datoen for din første kapsel. Så ved du om en måned, hvad du egentlig har prøvet.</p></div>
+</div>
+<footer>Wave 1 points every link at a country home page. Wave 2 will target whichever pages
+are earning impressions once Search Console has data.</footer>
+</div><script>
+function cardHtml(id){return document.getElementById('h_'+id).innerHTML;}
+function cardText(id){return document.getElementById('h_'+id).innerText;}
+async function copyRich(id,btn){
+  const h=cardHtml(id), t=cardText(id);
+  try{
+    await navigator.clipboard.write([new ClipboardItem({
+      'text/html': new Blob([h],{type:'text/html'}),
+      'text/plain': new Blob([t],{type:'text/plain'})})]);
+    flash(btn,'Copied with the link');
+  }catch(e){
+    try{ await navigator.clipboard.writeText(t); flash(btn,'Copied (plain)'); }
+    catch(e2){ flash(btn,'Press Ctrl+C'); }
+  }
+}
+async function copyTitle(id,btn){
+  try{ await navigator.clipboard.writeText(document.getElementById('t_'+id).textContent);
+       flash(btn,'Title copied'); }catch(e){ flash(btn,'Press Ctrl+C'); }
+}
+function flash(btn,msg){const o=btn.textContent;btn.textContent=msg;btn.classList.add('ok');
+  setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok');},1600);}
+function markDone(id,btn){const c=document.getElementById('c_'+id);
+  c.classList.toggle('done');
+  const on=c.classList.contains('done');
+  btn.textContent=on?'Done ✓':'Mark done';
+  try{localStorage.setItem('glp3b_w1_'+id,on?'1':'');}catch(e){}}
+window.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('[data-card]').forEach(c=>{
+    const id=c.getAttribute('data-card');
+    let v=null; try{v=localStorage.getItem('glp3b_w1_'+id);}catch(e){}
+    if(v){c.classList.add('done');
+      const b=document.getElementById('d_'+id); if(b)b.textContent='Done ✓';}
+  });
+});
+</script></body></html>
