@@ -74,7 +74,7 @@ read in a real browser, not against a platform's marketing page. Three of my ear
 wrong and are corrected here.</p></div>
 <div class="stats">
 <div class="stat"><b>122</b><span>placements audited</span></div>
-<div class="stat"><b>3</b><span>verdicts corrected</span></div>
+<div class="stat"><b>4</b><span>verdicts corrected</span></div>
 <div class="stat"><b>12/72</b><span>pages indexed</span></div>
 <div class="stat"><b>28 Aug 2026</b><span>measured</span></div>
 </div></div></header>
@@ -124,15 +124,15 @@ control — an empty body is recorded as unknown, never as a pass.</p>
 <td class="num strong">42</td>
 <td class="num">&mdash;</td>
 <td><span class="pill ok">KEEP</span></td>
-<td class="why">27 of 27 still live, none noindex, 42 dofollow links, zero nofollow. Second strongest, and the one that produced 21 good links on Wego6.</td></tr><tr class="fix">
+<td class="why">27 of 27 still live, none noindex, 42 dofollow links, zero nofollow. Second strongest, and the one that produced 21 good links on Wego6.</td></tr><tr class="bad">
 <td class="plat"><b>telegra.ph</b></td>
 <td class="num">7</td>
 <td class="num">7</td>
 <td class="num">&mdash;</td>
-<td class="num strong">7</td>
-<td class="num">&mdash;</td>
-<td><span class="pill fix">REINSTATE</span></td>
-<td class="why">I had this on the reject list as "13 of 13 nofollowed". <b>Wrong.</b> All 7 real placements are <code>index, follow</code> and every link to us is dofollow. The old reading came from a 404 sample page, not from a published article.</td></tr><tr class="ok">
+<td class="num strong">&mdash;</td>
+<td class="num">7</td>
+<td><span class="pill bad">DROP</span></td>
+<td class="why">A trap that fooled my own audit. The page is <code>index, follow</code>, and in the <b>rendered</b> DOM the links look dofollow &mdash; but the HTML Telegraph actually serves says <code>rel="nofollow"</code>, and its JavaScript strips the attribute after load. I nearly reinstated it on the rendered reading. The served HTML is the safe one to believe.</td></tr><tr class="ok">
 <td class="plat"><b>blogspot.com</b></td>
 <td class="num">2</td>
 <td class="num">2</td>
@@ -215,9 +215,10 @@ control — an empty body is recorded as unknown, never as a pass.</p>
 <td class="why">Our own VA instruction pages, deliberately noindex. Not a backlink source — listed only so the 122 reconcile.</td></tr></tbody></table></div>
 <div class="note"><b>Net effect on the wave-1 list:</b> Write.as and LiveJournal are out — both were on
 my "usable" list and neither survives contact with a real user page. Weebly and Notion come off too:
-I had no genuine sample for either, so they were never actually tested. <b>Telegraph goes back in</b>,
-because the reject was based on a 404 page. What remains is the set our own record already supports:
-<b>Google Sites, Tumblr, Blogger, Telegraph.</b></div>
+I had no genuine sample for either, so they were never actually tested. Telegraph stays out, but for
+a different reason than I first recorded &mdash; and it nearly went back in by mistake.
+What survives is a shortlist of <b>three</b>: <b>Google Sites, Tumblr, Blogger</b> &mdash; each one
+confirmed dofollow in the HTML the platform actually serves, not just in the rendered page.</div>
 </section>
 
 <section>
@@ -301,9 +302,9 @@ landed; one was spent on a platform I should not have approved.</div>
 <li><b>Point wave 2 at the 60 uncrawled pages, not the hubs.</b> The hubs are already indexed — a link
 there is spent on a page Google has. The one thing these platforms demonstrably do is give Googlebot
 a fresh path to a URL it has not seen, and that is exactly what is missing right now.</li>
-<li><b>Use four platforms only: Google Sites, Tumblr, Blogger, Telegraph.</b> Every other name on the
-list either serves noindex, nofollows the link, deletes the post, or charges for dofollow.</li>
-<li><b>Re-place the LiveJournal link</b> on one of the four, pointed at a Danish page — Denmark has
+<li><b>Use three platforms only: Google Sites, Tumblr, Blogger.</b> Every other name on the list
+either serves noindex, nofollows the link, deletes the post, or charges money for dofollow.</li>
+<li><b>Re-place the LiveJournal link</b> on one of the three, pointed at a Danish page — Denmark has
 zero indexed pages of seven.</li>
 <li><b>Verify every placement after the VA reports it.</b> One Strikingly post was reported done and
 has no link in it at all; seven WordPress.com posts were deleted after publication and nobody knew.
