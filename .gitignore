@@ -3,3 +3,4 @@ __pycache__/
 articles/
 platform_probe*.json
 .gstack/
+probe3/
