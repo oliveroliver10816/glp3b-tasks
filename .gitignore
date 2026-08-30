@@ -1,6 +1,8 @@
 *.py
+.gstack/
 __pycache__/
 articles/
+backlinks/build.py
 platform_probe*.json
-.gstack/
 probe3/
+submit/build.py
